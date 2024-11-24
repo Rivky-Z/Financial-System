@@ -1,1 +1,21 @@
-<p>expense works!</p>
+<form [formGroup]="receiptForm" (ngSubmit)="onSubmit()">
+    <label for="customer">Customer:</label>
+    <input type="text" id="customer" formControlName="customer">
+  
+    <label for="date">Date:</label>
+    <input type="date" id="date" formControlName="date">
+  
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" formControlName="amount">
+  
+    <label for="paymentMethod">Payment Method:</label>
+    <input type="text" id="paymentMethod" formControlName="paymentMethod">
+  
+    <label for="details">Details:</label>
+    <textarea id="details" formControlName="details"></textarea>
+  
+    <label for="receiptNumber">Receipt Number:</label>
+    <input type="text" id="receiptNumber" formControlName="receiptNumber">
+  
+    <button type="submit" [disabled]="!receiptForm.valid">Submit</button>
+  </form>

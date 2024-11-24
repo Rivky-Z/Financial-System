@@ -1,7 +1,3 @@
-
-
-
-
 const express = require('express')
 const { createUser } = require('../modules/users')
 const { existUsername } = require('../modules/users')
